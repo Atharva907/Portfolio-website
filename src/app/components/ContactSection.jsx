@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "../../../hooks/use-toast";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -16,21 +17,47 @@ export default function ContactSection() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    setTimeout(() => {
+    
+    try {
+      const res = await fetch("/api/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await res.json();
+      
+      if (data.success) {
+        toast({ 
+          title: "Message sent ✅", 
+          description: "I'll get back to you soon!" 
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast({ 
+          title: "Error ❌", 
+          description: "Please try again later." 
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({ 
+        title: "Error ❌", 
+        description: "Please try again later." 
+      });
+    } finally {
       setIsSubmitting(false);
-      setFormData({ name: "", email: "", message: "" });
-      alert("Thank you for your message! I'll get back to you soon.");
-    }, 1500);
+    }
   };
 
   return (
