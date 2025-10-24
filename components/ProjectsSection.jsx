@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
