@@ -44,9 +44,9 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400">Touch</span>
+            Get In <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-linear-to-r from-purple-600 to-indigo-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? I'd love to hear from you!
           </p>
@@ -69,7 +69,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-gray-600 dark:text-gray-300">contact@atharva.dev</p>
+                    <p className="text-gray-600 dark:text-gray-300">atharva.chavan907@gmail.com</p>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="text-gray-600 dark:text-gray-300">Mumbai, India</p>
+                    <p className="text-gray-600 dark:text-gray-300">Pune, India</p>
                   </div>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function ContactSection() {
                   ].map((social) => (
                     <a
                       key={social.name}
-                      href="#"
+                      href={social.name === "GitHub" ? "https://github.com/Atharva907" : social.name === "LinkedIn" ? "https://www.linkedin.com/in/atharva-chavan907" : "#"}
                       className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                       aria-label={social.name}
                     >

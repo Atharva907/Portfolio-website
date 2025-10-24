@@ -20,8 +20,8 @@ const projects = [
     desc: "Esports Tournament Platform", 
     tech: "Next.js + MongoDB",
     image: "🎮",
-    github: "https://github.com",
-    demo: "https://example.com",
+    github: "https://github.com/Atharva907/GameArena",
+    demo: "https://yt-nextjs-ecommerce.vercel.app/",
     color: "from-purple-500 to-pink-500"
   },
   { 

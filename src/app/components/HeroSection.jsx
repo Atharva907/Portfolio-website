@@ -60,15 +60,15 @@ export default function HeroSection() {
             transition={{ delay: 0.9, duration: 0.8 }}
             className="mt-10 flex justify-center space-x-6"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
+            <a href="https://github.com/Atharva907" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
               <Github size={24} />
               <span className="sr-only">GitHub</span>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
+            <a href="https://www.linkedin.com/in/atharva-chavan907" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
               <Linkedin size={24} />
               <span className="sr-only">LinkedIn</span>
             </a>
-            <a href="mailto:contact@example.com" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
+            <a href="mailto:atharva.chavan907@gmail.com" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
               <Mail size={24} />
               <span className="sr-only">Email</span>
             </a>
