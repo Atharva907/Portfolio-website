@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Atharva Chavan Portfolio
+
+A modern, responsive portfolio website built with Next.js and Tailwind CSS.
+
+## Features
+
+- Modern UI/UX with smooth animations
+- Dark/Light theme support
+- Responsive design for all devices
+- Built with Next.js 16, React 18, and Tailwind CSS
+- Component-based architecture with ShadCN UI
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/yourusername/portfolio-website.git
+   cd portfolio-website
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+   Or run the included install script:
+   ```
+   install.bat
+   ```
+
+3. Run the development server:
+   ```
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Build & Deploy
+
+### Local Build
+
+To build the project for production:
+```
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the production server:
+```
+npm start
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Vercel Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses the Next.js App Router, which requires the `app` directory to be at the project root.
 
-## Learn More
+Before deploying to Vercel, run the setup script:
+```
+setup-vercel.bat
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will copy all necessary files from `src/app` to the root `app` directory that Vercel expects.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then you can deploy to Vercel:
+1. Connect your repository to Vercel
+2. Vercel will automatically detect it's a Next.js project
+3. The build will run automatically
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/                  # Source files
+│   ├── components/         # Reusable UI components
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── HeroSection.jsx
+│   │   ├── AboutSection.jsx
+│   │   ├── ProjectsSection.jsx
+│   │   └── ContactSection.jsx
+│   ├── globals.css         # Global styles
+│   ├── layout.jsx          # Root layout
+│   └── page.jsx            # Home page
+├── components/ui/          # ShadCN UI components
+└── app/                   # Files for Vercel deployment (copied from src/app)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technologies Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16
+- React 18
+- Tailwind CSS
+- Framer Motion
+- Next Themes
+- Lucide React
+- ShadCN UI
+
+## License
+
+© 2024 Atharva Chavan. All rights reserved.
+
