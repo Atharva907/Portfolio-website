@@ -1,5 +1,3 @@
-
-
 "use client";
 import { motion } from "framer-motion";
 import { Code, Database, Palette, Zap } from "lucide-react";
@@ -111,4 +109,3 @@ export default function AboutSection() {
     </section>
   );
 }
-

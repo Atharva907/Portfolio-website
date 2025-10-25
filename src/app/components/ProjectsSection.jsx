@@ -1,5 +1,3 @@
-
-
 "use client";
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
@@ -154,4 +152,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-
