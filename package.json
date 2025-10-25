@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:mongodb": "node scripts/check-mongodb.js"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",

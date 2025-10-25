@@ -19,6 +19,14 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground flex items-center gap-1">
               © {currentYear} Made with <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" /> by Atharva
             </p>
+            <div className="mt-2">
+              <a 
+                href="/admin/messages" 
+                className="text-xs text-muted-foreground hover:text-primary transition-colors"
+              >
+                Admin
+              </a>
+            </div>
           </div>
 
           <div className="flex items-center gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700" style={{animationDelay: "200ms"}}>
