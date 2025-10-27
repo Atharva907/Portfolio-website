@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 pt-20 sm:pt-24">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 dark:bg-purple-700 animate-blob"></div>
@@ -14,36 +14,55 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="mb-6"
+            className="relative"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
-              <span className="block">Hi, I'm</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400">
-                Atharva Chavan
-              </span>
-            </h1>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
+              <img 
+                src="/Atharva image.png" 
+                alt="Atharva Chavan" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+              <span className="text-white font-bold text-xl">AC</span>
+            </div>
           </motion.div>
+          
+          <div className="text-center lg:text-left lg:max-w-xl">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="mb-6"
+            >
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                <span className="block">Hi, I'm</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400">
+                  Atharva Chavan
+                </span>
+              </h1>
+            </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-6 max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300"
-          >
-            A passionate Full Stack Developer building fast, modern web applications using Next.js, AI, and creativity.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="mt-6 text-xl text-gray-600 dark:text-gray-300"
+            >
+              A passionate Full Stack Developer building fast, modern web applications using Next.js, AI, and creativity.
+            </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
+            >
             <Button asChild size="lg" className="px-8 py-3 text-base font-medium rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 shadow-lg transform transition-all duration-200 hover:scale-105">
               <a href="#projects">Explore My Work</a>
             </Button>
@@ -52,12 +71,12 @@ export default function HeroSection() {
             </Button>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
-            className="mt-10 flex justify-center space-x-6"
-          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="mt-10 flex justify-center lg:justify-start space-x-6"
+            >
             <a href="https://github.com/Atharva907" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-400 transition-colors">
               <Github size={24} />
               <span className="sr-only">GitHub</span>
@@ -70,7 +89,8 @@ export default function HeroSection() {
               <Mail size={24} />
               <span className="sr-only">Email</span>
             </a>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
