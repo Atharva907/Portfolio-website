@@ -28,9 +28,9 @@ export default function HeroSection() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+            {/* <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-xl">AC</span>
-            </div>
+            </div> */}
           </motion.div>
           
           <div className="text-center lg:text-left lg:max-w-xl">
