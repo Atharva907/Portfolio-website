@@ -5,6 +5,15 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   { 
+    title: "GameArena", 
+    desc: "Esports Tournament Platform", 
+    tech: "Next.js + MongoDB",
+    image: "🎮",
+    github: "https://github.com/Atharva907/GameArena",
+    demo: "https://game-arena-iota.vercel.app/",
+    color: "from-purple-500 to-pink-500"
+  },
+  { 
     title: "ByteCheck", 
     desc: "AI Resume Verifier for IT Recruiters", 
     tech: "Next.js + OpenAI",
@@ -12,15 +21,6 @@ const projects = [
     github: "https://github.com",
     demo: "https://example.com",
     color: "from-blue-500 to-cyan-500"
-  },
-  { 
-    title: "GameArena", 
-    desc: "Esports Tournament Platform", 
-    tech: "Next.js + MongoDB",
-    image: "🎮",
-    github: "https://github.com/Atharva907/GameArena",
-    demo: "https://yt-nextjs-ecommerce.vercel.app/",
-    color: "from-purple-500 to-pink-500"
   },
   { 
     title: "XAUUSD Bot", 
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of my recent projects that I've worked on. Each project showcases my skills and experience in different technologies.
+            Here are some of my recent projects that I&apos;ve worked on. Each project showcases my skills and experience in different technologies.
           </p>
         </motion.div>
 
