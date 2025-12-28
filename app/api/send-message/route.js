@@ -20,14 +20,17 @@ export async function POST(req) {
     }
 
     // Connect to database
-    await connectDB();
+    const db = await connectDB();
 
-    // Save to MongoDB with error handling
-    try {
-      await Message.create({ name, email, message });
-    } catch (dbError) {
-      console.error("Database error:", dbError);
-      return NextResponse.json({ error: "Failed to save message" }, { status: 500 });
+    // Skip database operations during build
+    if (db) {
+      // Save to MongoDB with error handling
+      try {
+        await Message.create({ name, email, message });
+      } catch (dbError) {
+        console.error("Database error:", dbError);
+        return NextResponse.json({ error: "Failed to save message" }, { status: 500 });
+      }
     }
 
     // Send Email via Resend with error handling

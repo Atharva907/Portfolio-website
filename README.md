@@ -1,7 +1,7 @@
 
 # Atharva Chavan Portfolio
 
-A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS.
+A modern, responsive portfolio website showcasing DevOps projects and infrastructure expertise.
 
 ## Features
 
@@ -9,7 +9,7 @@ A modern, responsive portfolio website built with Next.js, React, and Tailwind C
 - Dark/Light theme support
 - Responsive design for all devices
 - Contact form with email notifications
-- Project showcase with filtering
+- DevOps project showcase
 - Mobile-friendly navigation
 - Built with Next.js 16, React 18, and Tailwind CSS
 - Component-based architecture with ShadCN UI
@@ -123,7 +123,8 @@ portfolio-website/
 ## Technologies Used
 
 - **Frontend**: Next.js 16, React 18, Tailwind CSS, Framer Motion
-- **Backend**: Node.js, Express
+- **DevOps Tools**: Docker, Kubernetes, Jenkins, Terraform
+- **Cloud Platforms**: AWS, Azure, GCP
 - **Database**: MongoDB with Mongoose
 - **Email**: Resend API
 - **Deployment**: Vercel

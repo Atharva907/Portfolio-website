@@ -6,25 +6,25 @@ const skills = [
   {
     name: "Frontend Development",
     icon: <Palette size={24} />,
-    description: "React, Next.js, Tailwind CSS, TypeScript",
+    description: "HTML5, CSS3, JavaScript, React.js",
     color: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
   },
   {
     name: "Backend Development",
     icon: <Database size={24} />,
-    description: "Node.js, Express, MongoDB, PostgreSQL",
+    description: "Node.js, Express.js, RESTful APIs, MongoDB",
     color: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400"
   },
   {
-    name: "UI/UX Design",
+    name: "DevOps & Cloud",
     icon: <Zap size={24} />,
-    description: "Figma, Adobe XD, Responsive Design",
+    description: "Docker, Kubernetes, AWS, CI/CD",
     color: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400"
   },
   {
-    name: "Clean Code",
+    name: "Automation & IaC",
     icon: <Code size={24} />,
-    description: "Best Practices, Testing, Documentation",
+    description: "Terraform, GitHub Actions, Jenkins",
     color: "bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400"
   }
 ];
@@ -57,7 +57,11 @@ export default function AboutSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-2xl transform rotate-3"></div>
               <div className="relative bg-white dark:bg-gray-800 p-1 rounded-2xl">
                 <div className="bg-gray-100 dark:bg-gray-700 rounded-2xl p-8 h-64 flex items-center justify-center">
-                  <div className="text-6xl">👨‍💻</div>
+                  <img 
+                    src="/ilya-pavlov-OqtafYT5kTw-unsplash.jpg" 
+                    alt="Development workspace with coding setup" 
+                    className="w-full h-full object-cover rounded-xl"
+                  />
                 </div>
               </div>
             </div>
@@ -69,18 +73,26 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-4">Full Stack Developer & UI Enthusiast</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              I'm a developer who loves combining clean code with beautiful UI design. My expertise includes React, Next.js, TailwindCSS, and building scalable backend systems. I'm passionate about creating intuitive user experiences and solving complex problems with elegant solutions.
+              I'm a Full-Stack Developer and DevOps Engineer specializing in building scalable web applications and automating deployments. I develop end-to-end solutions—from frontend interfaces to cloud infrastructure—focusing on performance, security, and automation.
             </p>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enjoying a good cup of coffee while reading about the latest tech trends.
+              When I'm not coding or optimizing pipelines, I enjoy exploring new technologies, contributing to open source projects, and sharing knowledge through tech blogs and community meetups.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["React", "Next.js", "TypeScript", "TailwindCSS", "Node.js", "MongoDB"].map((skill) => (
-                <span key={skill} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium">
+              {["React.js", "Node.js", "Express.js", "MongoDB", "Docker", "Kubernetes", "AWS", "GitHub Actions", "Jenkins", "Terraform"].map((skill, index) => (
+                <motion.span 
+                  key={skill} 
+                  className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                >
                   {skill}
-                </span>
+                </motion.span>
               ))}
             </div>
           </motion.div>

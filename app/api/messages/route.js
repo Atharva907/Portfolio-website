@@ -4,7 +4,12 @@ import Message from "../../../models/Message";
 
 export async function GET() {
   try {
-    await connectDB();
+    const db = await connectDB();
+
+    // Return empty array if DB connection is skipped (during build)
+    if (!db) {
+      return NextResponse.json([]);
+    }
 
     // Fetch all messages, sorted by newest first
     const messages = await Message.find({}).sort({ createdAt: -1 });

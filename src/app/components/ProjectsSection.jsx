@@ -76,7 +76,7 @@ export default function ProjectsSection() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of my recent projects that I&apos;ve worked on. Each project showcases my skills and experience in different technologies.
+            Here are some of my recent DevOps projects that I&apos;ve worked on. Each project showcases my skills in infrastructure automation, containerization, and cloud technologies.
           </p>
         </motion.div>
 
@@ -92,18 +92,41 @@ export default function ProjectsSection() {
             >
               <Card className="h-full overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center text-6xl relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                  <div className="relative z-10 transform transition-transform duration-300 group-hover:scale-110">
+                  <motion.div 
+                    className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"
+                    initial={false}
+                    whileHover={{ opacity: 0.3 }}
+                  ></motion.div>
+                  <motion.div 
+                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    initial={false}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    <div className="text-white text-center p-4">
+                      <p className="text-sm font-medium mb-2">View Project</p>
+                      <div className="w-8 h-0.5 bg-white mx-auto"></div>
+                    </div>
+                  </motion.div>
+                  <motion.div 
+                    className="relative z-10 transform transition-transform duration-300"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                  >
                     {project.image}
-                  </div>
+                  </motion.div>
                 </div>
                 <CardHeader className="pb-3">
                   <h3 className="text-xl font-bold">{project.title}</h3>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">{project.desc}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.split(' + ').map((tech, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded-full text-gray-600 dark:text-gray-300">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-purple-600 dark:text-purple-400">{project.tech}</span>
                     <div className="flex gap-2">
                       <a 
                         href={project.github} 

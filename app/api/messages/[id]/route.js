@@ -13,7 +13,12 @@ export async function DELETE(req, { params }) {
       );
     }
 
-    await connectDB();
+    const db = await connectDB();
+
+    // Skip database operations during build
+    if (!db) {
+      return NextResponse.json({ error: "Database not available during build" }, { status: 503 });
+    }
 
     // Find and delete the message
     const result = await Message.findByIdAndDelete(id);
