@@ -8,16 +8,16 @@ const projects = [
     title: "GameArena", 
     desc: "Esports Tournament Platform", 
     tech: "Next.js + MongoDB",
-    image: "🎮",
+    image: "/gameArena.jpg",
     github: "https://github.com/Atharva907/GameArena",
     demo: "https://game-arena-iota.vercel.app/",
     color: "from-purple-500 to-pink-500"
   },
   { 
-    title: "ByteCheck", 
+    title: "ResumeA", 
     desc: "AI Resume Verifier for IT Recruiters", 
     tech: "Next.js + OpenAI",
-    image: "🤖",
+    image: "/resume.jpg",
     github: "https://github.com",
     demo: "https://example.com",
     color: "from-blue-500 to-cyan-500"
@@ -26,7 +26,7 @@ const projects = [
     title: "XAUUSD Bot", 
     desc: "Automated Forex Trading Bot", 
     tech: "Python + MT5",
-    image: "💹",
+    image: "/xauusd-bot.jpg",
     github: "https://github.com",
     demo: "https://example.com",
     color: "from-green-500 to-teal-500"
@@ -35,7 +35,7 @@ const projects = [
     title: "Social Connect", 
     desc: "Social Media Analytics Dashboard", 
     tech: "React + D3.js",
-    image: "📊",
+    image: "/social-connect.jpg",
     github: "https://github.com",
     demo: "https://example.com",
     color: "from-orange-500 to-red-500"
@@ -44,7 +44,7 @@ const projects = [
     title: "Cloud Storage", 
     desc: "Secure File Storage Solution", 
     tech: "Node.js + AWS",
-    image: "☁️",
+    image: "/cloud.jpg",
     github: "https://github.com",
     demo: "https://example.com",
     color: "from-indigo-500 to-blue-500"
@@ -53,7 +53,7 @@ const projects = [
     title: "Task Manager", 
     desc: "Productivity App with Team Features", 
     tech: "Vue.js + Firebase",
-    image: "✅",
+    image: "/todo.jpg",
     github: "https://github.com",
     demo: "https://example.com",
     color: "from-pink-500 to-rose-500"
@@ -111,7 +111,11 @@ export default function ProjectsSection() {
                     className="relative z-10 transform transition-transform duration-300"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
-                    {project.image}
+                    {project.image.startsWith('/') ? (
+                      <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-xl" />
+                    ) : (
+                      project.image
+                    )}
                   </motion.div>
                 </div>
                 <CardHeader className="pb-3">

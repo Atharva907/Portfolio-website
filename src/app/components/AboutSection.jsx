@@ -58,7 +58,7 @@ export default function AboutSection() {
               <div className="relative bg-white dark:bg-gray-800 p-1 rounded-2xl">
                 <div className="bg-gray-100 dark:bg-gray-700 rounded-2xl p-8 h-64 flex items-center justify-center">
                   <img 
-                    src="/ilya-pavlov-OqtafYT5kTw-unsplash.jpg" 
+                    src="/code.jpg" 
                     alt="Development workspace with coding setup" 
                     className="w-full h-full object-cover rounded-xl"
                   />
