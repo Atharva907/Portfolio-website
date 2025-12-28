@@ -20,17 +20,23 @@ export async function POST(req) {
     }
 
     // Connect to database
-    const db = await connectDB();
+    try {
+      const db = await connectDB();
 
-    // Skip database operations during build
-    if (db) {
       // Save to MongoDB with error handling
       try {
         await Message.create({ name, email, message });
+        console.log("✅ Message saved to MongoDB");
       } catch (dbError) {
         console.error("Database error:", dbError);
         return NextResponse.json({ error: "Failed to save message" }, { status: 500 });
       }
+    } catch (connectionError) {
+      console.error("Database connection error:", connectionError);
+      return NextResponse.json({ 
+        error: "Database connection failed. Please try again later.",
+        details: process.env.NODE_ENV === "development" ? connectionError.message : undefined
+      }, { status: 500 });
     }
 
     // Send Email via Resend with error handling
